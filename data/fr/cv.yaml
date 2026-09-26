@@ -1,0 +1,34 @@
+experience:
+  - title: Doctorante
+    org: Université de Genève, Faculté de psychologie et des sciences de l'éducation
+    start: 2021
+    end: 2026
+    summary: Description provisoire du projet de thèse, de l'assistanat d'enseignement et de l'encadrement d'étudiant·e·s de master.
+  - title: Stagiaire en psychologie clinique
+    org: Hôpital (provisoire)
+    start: 2019
+    end: 2020
+    summary: Description provisoire du stage clinique.
+education:
+  - title: Doctorat en psychologie
+    org: Université de Genève
+    start: 2021
+    end: 2026
+    summary: Titre de thèse provisoire sur l'entraînement attentionnel et le bien-être.
+  - title: Master en psychologie clinique
+    org: Université (provisoire)
+    start: 2018
+    end: 2020
+  - title: Bachelor en psychologie
+    org: Université (provisoire)
+    start: 2015
+    end: 2018
+awards:
+  - title: Bourse de voyage (provisoire)
+    org: Société (provisoire)
+    start: 2024
+languages:
+  - name: Français
+    level: Langue maternelle
+  - name: Anglais
+    level: Courant

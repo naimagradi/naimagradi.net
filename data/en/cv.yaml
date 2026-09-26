@@ -1,0 +1,34 @@
+experience:
+  - title: Doctoral researcher
+    org: University of Geneva, Faculty of Psychology and Educational Sciences
+    start: 2021
+    end: 2026
+    summary: Placeholder description of the doctoral project, teaching assistantship and supervision of master students.
+  - title: Clinical psychology intern
+    org: Placeholder hospital
+    start: 2019
+    end: 2020
+    summary: Placeholder description of the clinical internship.
+education:
+  - title: PhD in Psychology
+    org: University of Geneva
+    start: 2021
+    end: 2026
+    summary: Placeholder thesis title on attention training and well-being.
+  - title: MSc in Clinical Psychology
+    org: Placeholder University
+    start: 2018
+    end: 2020
+  - title: BSc in Psychology
+    org: Placeholder University
+    start: 2015
+    end: 2018
+awards:
+  - title: Placeholder travel award
+    org: Placeholder society
+    start: 2024
+languages:
+  - name: French
+    level: Native
+  - name: English
+    level: Fluent

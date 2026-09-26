@@ -1,0 +1,19 @@
+- title: "Placeholder preprint: A randomised trial of a brief mindfulness intervention"
+  authors: ["Naïma Gradi", "C. Coauthor", "D. Coauthor"]
+  year: 2026
+  venue: PsyArXiv
+  type: preprint
+  doi: 10.0000/placeholder.3
+- title: "Placeholder: Attention training and emotional well-being in young adults"
+  authors: ["Naïma Gradi", "A. Coauthor", "D. Bavelier"]
+  year: 2025
+  venue: Journal of Placeholder Psychology
+  type: article
+  doi: 10.0000/placeholder.1
+  pdf: https://example.com/placeholder.pdf
+- title: "Placeholder: Everyday digital habits and mental health, a longitudinal study"
+  authors: ["B. Coauthor", "Naïma Gradi", "D. Bavelier"]
+  year: 2024
+  venue: Placeholder Mental Health Review
+  type: article
+  doi: 10.0000/placeholder.2
