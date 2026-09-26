@@ -1,0 +1,11 @@
+<ol class="pub-list not-prose">
+  {{- range sort hugo.Data.talks "date" "desc" }}
+  <li class="pub-item">
+    <div class="pub-year">{{ (time .date).Year }}</div>
+    <div class="pub-body">
+      <div class="pub-title">{{ .title }} <span class="pub-badge">{{ T (printf "pub_%s" .type) }}</span></div>
+      <div class="pub-venue"><em>{{ .event }}</em> · {{ .location }} · {{ (time .date) | time.Format ":date_long" }}</div>
+    </div>
+  </li>
+  {{- end }}
+</ol>

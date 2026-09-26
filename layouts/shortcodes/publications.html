@@ -1,0 +1,25 @@
+{{- /* Usage: {{< publications >}} or {{< publications limit=3 >}} */ -}}
+{{- $limit := .Get "limit" | default 0 | int -}}
+{{- $me := site.Params.author.name -}}
+{{- $pubs := sort hugo.Data.publications "year" "desc" -}}
+{{- if gt $limit 0 }}{{ $pubs = first $limit $pubs }}{{ end -}}
+<ol class="pub-list not-prose">
+  {{- range $pubs }}
+  <li class="pub-item">
+    <div class="pub-year">{{ .year }}</div>
+    <div class="pub-body">
+      <div class="pub-title">
+        {{- with .doi }}<a href="https://doi.org/{{ . }}">{{ end }}{{ .title }}{{ with .doi }}</a>{{ end -}}
+        {{- if eq .type "preprint" }} <span class="pub-badge">{{ T "pub_preprint" }}</span>{{ end -}}
+      </div>
+      <div class="pub-authors">
+        {{- range $i, $a := .authors }}{{ if $i }}, {{ end }}{{ if eq $a $me }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end -}}
+      </div>
+      <div class="pub-venue"><em>{{ .venue }}</em>
+        {{- with .doi }} · <a href="https://doi.org/{{ . }}">DOI</a>{{ end -}}
+        {{- with .pdf }} · <a href="{{ . }}">PDF</a>{{ end -}}
+      </div>
+    </div>
+  </li>
+  {{- end }}
+</ol>

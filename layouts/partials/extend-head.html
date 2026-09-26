@@ -1,0 +1,12 @@
+{{- $a := site.Params.author -}}
+{{- $sameAs := slice -}}
+{{- range $a.links }}{{ range $k, $v := . }}{{ if ne $k "email" }}{{ $sameAs = $sameAs | append $v }}{{ end }}{{ end }}{{ end -}}
+<script type="application/ld+json">
+{{ dict "@context" "https://schema.org" "@type" "Person" "name" $a.name "jobTitle" $a.headline "url" site.Home.Permalink "affiliation" (dict "@type" "CollegeOrUniversity" "name" "University of Geneva") "sameAs" $sameAs | jsonify | safeJS }}
+</script>
+{{- with resources.Get "css/palette-picker.css" }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+<script>
+  (function () {
+    try { var p = localStorage.getItem("demo-palette"); if (p) document.documentElement.setAttribute("data-palette", p); } catch (e) {}
+  })();
+</script>

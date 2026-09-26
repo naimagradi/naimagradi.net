@@ -1,0 +1,19 @@
+{{- /* Demo only: floating palette picker. */ -}}
+<div class="palette-picker">
+  <label for="palette-select">{{ T "palette" }}</label>
+  <select id="palette-select">
+    <option value="">B · Mint & Pine (default)</option>
+    {{- range $k, $v := hugo.Data.palettes }}<option value="{{ $k }}">{{ $v }}</option>{{ end }}
+  </select>
+</div>
+<script>
+  (function () {
+    var s = document.getElementById("palette-select");
+    try { s.value = localStorage.getItem("demo-palette") || ""; } catch (e) {}
+    s.addEventListener("change", function () {
+      if (s.value) document.documentElement.setAttribute("data-palette", s.value);
+      else document.documentElement.removeAttribute("data-palette");
+      try { localStorage.setItem("demo-palette", s.value); } catch (e) {}
+    });
+  })();
+</script>

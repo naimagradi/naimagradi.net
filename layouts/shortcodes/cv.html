@@ -1,0 +1,24 @@
+{{- $cv := index hugo.Data .Page.Language.Lang "cv" -}}
+{{- range $key := slice "experience" "education" "awards" -}}
+  {{- with index $cv $key }}
+  <h2>{{ T (printf "cv_%s" $key) }}</h2>
+  <ol class="cv-timeline not-prose">
+    {{- range . }}
+    <li class="cv-item">
+      <div class="cv-dates">{{ .start }}{{ with .end }} – {{ . }}{{ end }}</div>
+      <div class="cv-body">
+        <div class="cv-title">{{ .title }}</div>
+        {{ with .org }}<div class="cv-org">{{ . }}</div>{{ end }}
+        {{ with .summary }}<p class="cv-summary">{{ . }}</p>{{ end }}
+      </div>
+    </li>
+    {{- end }}
+  </ol>
+  {{- end }}
+{{- end }}
+{{- with $cv.languages }}
+<h2>{{ T "cv_languages" }}</h2>
+<ul class="cv-languages not-prose">
+  {{- range . }}<li><strong>{{ .name }}</strong> · {{ .level }}</li>{{ end }}
+</ul>
+{{- end }}
