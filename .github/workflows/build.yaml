@@ -1,0 +1,59 @@
+name: website
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number }}-${{ github.event.ref }}
+  cancel-in-progress: true
+on:  # yamllint disable-line rule:truthy
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+      # Only for themes that need Node (e.g. Tailwind CLI for Hugo Blox).
+      - uses: actions/setup-node@v7
+        if: hashFiles('package-lock.json') != ''
+        with:
+          node-version: lts/*
+          cache: npm
+      - if: hashFiles('package-lock.json') != ''
+        run: npm ci
+      # On pushes, build for the URL GitHub Pages serves (custom domain or
+      # <user>.github.io/<repo>/). Pull requests keep the baseURL from the config.
+      - id: pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
+      - run: hugo build --gc --minify ${{ steps.pages.outputs.base_url && format('--baseURL {0}/', steps.pages.outputs.base_url) || '' }}
+      # Internal links only; root-relative links resolve against public/.
+      - if: github.event_name == 'pull_request'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress --root-dir "${{ github.workspace }}/public" 'public/**/*.html'
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./public
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    timeout-minutes: 10
+    runs-on: ubuntu-slim
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
