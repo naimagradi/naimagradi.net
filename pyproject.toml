@@ -1,0 +1,18 @@
+[project]
+dependencies = [
+  'pre-commit',
+  'toml-sort',
+  'yamllint',
+]
+description = 'Linters for the website.'
+name = 'linter'
+requires-python = '>=3.11'
+version = '0.1.0'
+
+[tool.tomlsort]
+ignore_case = true
+sort_table_keys = true
+trailing_comma_inline_array = true
+
+[tool.uv]
+package = false

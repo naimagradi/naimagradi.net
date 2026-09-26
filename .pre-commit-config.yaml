@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.38.0
+    hooks:
+      - id: yamllint
+        args: [--strict, -c, .yamllint.yaml]
+
+  - repo: https://github.com/pappasam/toml-sort
+    rev: v0.25.0
+    hooks:
+      - id: toml-sort-fix
+
+  - repo: https://github.com/biomejs/pre-commit
+    rev: v2.5.14
+    hooks:
+      - id: biome-check
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.23.3
+    hooks:
+      - id: markdownlint-cli2

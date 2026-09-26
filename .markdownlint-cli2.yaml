@@ -1,0 +1,10 @@
+config:
+  # Long lines are fine in prose and tables.
+  MD013: false
+  # Inline HTML is used sparingly in content and the README.
+  MD033: false
+ignores:
+  - "node_modules/**"
+  - "public/**"
+  - "resources/**"
+  - "themes/**"
