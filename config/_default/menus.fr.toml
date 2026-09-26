@@ -1,0 +1,14 @@
+[[main]]
+name = "À propos"
+pageRef = "/"
+weight = 10
+
+[[main]]
+name = "CV"
+pageRef = "cv"
+weight = 20
+
+[[main]]
+name = "Publications"
+pageRef = "publications"
+weight = 30

@@ -1,0 +1,31 @@
+autoSwitchAppearance = true
+colorScheme = "palette-b-mint-pine"
+defaultAppearance = "light"
+enableCodeCopy = false
+enableSearch = false
+
+[article]
+showAuthor = false
+showDate = false
+showHeadingAnchors = false
+showPagination = false
+showReadingTime = false
+showTaxonomies = false
+showWordCount = false
+
+[footer]
+showAppearanceSwitcher = true
+showCopyright = true
+showMenu = true
+showScrollToTop = true
+showThemeAttribution = false
+
+[header]
+layout = "fixed-fill-blur"
+
+[homepage]
+layout = "profile"
+showRecent = false
+
+[list]
+showBreadcrumbs = false

@@ -1,0 +1,22 @@
+label = "Français"
+locale = "fr-CH"
+title = "Naïma Gradi"
+weight = 2
+
+[params]
+dateFormat = "2 janvier 2006"
+description = "Chercheuse en psychologie et santé mentale, Université de Genève."
+displayName = "FR"
+isoCode = "fr"
+
+[params.author]
+bio = "Doctorat en psychologie · Université de Genève"
+headline = "Chercheuse en psychologie et santé mentale"
+image = "img/avatar.png"
+links = [
+  { email = "mailto:placeholder@example.com" },
+  { orcid = "https://orcid.org/0000-0000-0000-0000" },
+  { google-scholar = "https://scholar.google.com/" },
+  { linkedin = "https://www.linkedin.com/" },
+]
+name = "Naïma Gradi"

@@ -1,0 +1,23 @@
+# Site-wide configuration. Language-specific settings live in languages.<lang>.toml,
+# menus in menus.<lang>.toml and theme parameters in params.toml.
+# The CI overrides baseURL with the URL GitHub Pages serves.
+baseURL = "https://naima.gradi.net/"
+defaultContentLanguage = "en"
+# English under /en/ and French under /fr/; / redirects to /en/.
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+summaryLength = 0
+theme = "blowfish"
+
+# Loose lower bound; the CI always installs the latest Hugo release.
+[module.hugoVersion]
+min = "0.162.0"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+pagerSize = 20
+
+[taxonomies]
+tag = "tags"
