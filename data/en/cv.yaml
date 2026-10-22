@@ -18,6 +18,9 @@ experience:
     start: 2019
     end: 2020
     summary: Top laner under the name Freyja. GIRLGAMER World Champion (2020) and two-time European Champion (2019); high-level teamwork.
+    image:
+      src: esports-oob.jpg
+      alt: Naïma playing in the OOB team jersey, with a headset, at an esports event
   - title: UX design intern
     org: Capgemini (for Airbus)
     start: 2018

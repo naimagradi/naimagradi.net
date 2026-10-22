@@ -17,6 +17,9 @@ experience:
     start: 2019
     end: 2020
     summary: Toplaner sous le pseudonyme Freyja. Championne du monde GIRLGAMER (2020) et double championne d'Europe (2019) ; travail en équipe à haut niveau.
+    image:
+      src: esports-oob.jpg
+      alt: Naïma en train de jouer avec le maillot de l'équipe OOB et un casque, lors d'un événement esport
   - title: Stagiaire UX designer
     org: Capgemini (pour Airbus)
     start: 2018

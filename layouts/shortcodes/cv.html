@@ -1,4 +1,5 @@
-{{- $cv := index hugo.Data .Page.Language.Lang "cv" -}}
+{{- $page := .Page -}}
+{{- $cv := index hugo.Data $page.Language.Lang "cv" -}}
 {{- range $key := slice "experience" "education" "awards" "service" -}}
   {{- with index $cv $key }}
   <h2>{{ T (printf "cv_%s" $key) }}</h2>
@@ -10,6 +11,9 @@
     <li class="cv-item">
       <div class="cv-dates">{{ .start }}{{ with .end }} – {{ . }}{{ end }}</div>
       <div class="cv-body">
+        {{- with .image }}{{ $image := . }}{{ with $page.Resources.Get $image.src }}{{ $img := .Resize "640x q85" }}
+        <img class="cv-photo" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $image.alt }}" loading="lazy">
+        {{- end }}{{ end }}
         <div class="cv-title">{{ .title }}</div>
         {{ with .org }}<div class="cv-org">{{ . }}</div>{{ end }}
         {{ with .summary }}<p class="cv-summary">{{ . }}</p>{{ end }}
