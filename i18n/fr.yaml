@@ -4,10 +4,15 @@ cv_awards: Distinctions
 cv_service: Engagement associatif
 cv_skills: Compétences
 cv_languages: Langues
+pub_article: Article de revue
+pub_conference: Article de conférence
+pub_thesis: Thèse de doctorat
 pub_preprint: Prépublication
 pub_talks: Conférences et posters
 pub_talk: Présentation
+pub_invited: Conférence invitée
 pub_poster: Poster
+pub_download: Télécharger (PDF)
 pub_recent: Publications récentes
 pub_all: Toutes les publications →
 home_about: À propos

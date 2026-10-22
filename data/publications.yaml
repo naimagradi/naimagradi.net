@@ -1,19 +1,28 @@
-- title: "Placeholder preprint: A randomised trial of a brief mindfulness intervention"
-  authors: ["Naïma Gradi", "C. Coauthor", "D. Coauthor"]
+# Publications, newest first (the list is shown in this order; the home page shows the first three).
+# `type`: article, conference or thesis. The author equal to the site author's name is shown in bold.
+- title: "A Blueprint for Unraveling Therapeutic Video Game Design"
+  authors: ["Naïma Gradi", "Camille Carliez", "Shadee Thiam", "Swann Pichon", "Mathieu Scheltienne", "Chenyu Ye", "Jan L. Plass", "Daphne Bavelier"]
   year: 2026
-  venue: PsyArXiv
-  type: preprint
-  doi: 10.0000/placeholder.3
-- title: "Placeholder: Attention training and emotional well-being in young adults"
-  authors: ["Naïma Gradi", "A. Coauthor", "D. Bavelier"]
+  venue: Companion Proceedings of the Annual Symposium on Computer-Human Interaction in Play (CHI PLAY Companion '26)
+  type: conference
+  doi: 10.1145/3800965.3834322
+- title: "Video game-based interventions for anxiety and depression: from design to effectiveness"
+  authors: ["Naïma Gradi"]
+  year: 2026
+  venue: Université de Genève
+  details: no. 960
+  type: thesis
+- title: "Analyzing Video Game Design Elements in Mental Health Interventions"
+  authors: ["Naïma Gradi", "Jan L. Plass", "Daphné Bavelier"]
   year: 2025
-  venue: Journal of Placeholder Psychology
-  type: article
-  doi: 10.0000/placeholder.1
-  pdf: https://example.com/placeholder.pdf
-- title: "Placeholder: Everyday digital habits and mental health, a longitudinal study"
-  authors: ["B. Coauthor", "Naïma Gradi", "D. Bavelier"]
+  venue: Joint Conference on Serious Games (JCSG 2025), Lecture Notes in Computer Science 16243
+  details: pp. 174–181
+  type: conference
+  doi: 10.1007/978-3-032-10518-9_15
+- title: "Evaluating the effect of action-like video game play and of casual video game play on anxiety in adolescents with elevated anxiety: protocol for a multi-center, parallel group, assessor-blind, randomized controlled trial"
+  authors: ["Naïma Gradi", "Adrien Chopin", "Daphné Bavelier", "Tomer Shechner", "Swann Pichon"]
   year: 2024
-  venue: Placeholder Mental Health Review
+  venue: BMC Psychiatry
+  details: 24, 56
   type: article
-  doi: 10.0000/placeholder.2
+  doi: 10.1186/s12888-024-05515-7

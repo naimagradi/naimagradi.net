@@ -1,10 +1,24 @@
-- title: "Placeholder talk: Attention, emotion and well-being"
-  event: Placeholder Psychology Congress
-  location: Geneva, Switzerland
-  date: 2025-09-10
-  type: talk
-- title: "Placeholder poster: Digital habits and mood in daily life"
-  event: Placeholder Society Annual Meeting
-  location: Lausanne, Switzerland
-  date: 2024-05-20
+# Talks and posters, newest first. One entry per talk or poster: when the same poster (or talk) was presented
+# at several conferences, list them all under `events` (newest first). `type`: talk, poster or invited. `file`
+# (optional) is a PDF in static/, e.g. files/posters/<name>.pdf, offered for download.
+- title: "A Blueprint for Unraveling Therapeutic Video Game Design"
   type: poster
+  file: files/posters/naima-gradi-poster-2026-chi-play.pdf
+  events:
+    - name: CHI PLAY 2026
+      location: York, United Kingdom
+      date: 2026-11-02
+- title: "Analyzing Video Game Design Elements in Mental Health Interventions"
+  type: poster
+  file: files/posters/naima-gradi-poster-2025-jcsg.pdf
+  events:
+    - name: Joint Conference on Serious Games (JCSG 2025)
+      location: Lucerne, Switzerland
+      date: 2025-12-04
+- title: "Evaluating the effect of action-like game play and of casual game play on anxiety in adolescents with elevated anxiety: protocol for a randomized controlled trial"
+  type: poster
+  file: files/posters/naima-gradi-poster-2025-learning-plasticity.pdf
+  events:
+    - name: Learning and Plasticity Conference
+      location: Äkäslompolo, Finland
+      date: 2025-04-06

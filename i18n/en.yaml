@@ -4,10 +4,15 @@ cv_awards: Awards
 cv_service: Community involvement
 cv_skills: Skills
 cv_languages: Languages
+pub_article: Journal article
+pub_conference: Conference paper
+pub_thesis: PhD thesis
 pub_preprint: Preprint
 pub_talks: Talks & posters
 pub_talk: Talk
+pub_invited: Invited talk
 pub_poster: Poster
+pub_download: Download (PDF)
 pub_recent: Recent publications
 pub_all: All publications →
 home_about: About
