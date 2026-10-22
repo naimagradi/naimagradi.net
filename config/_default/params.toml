@@ -24,7 +24,7 @@ showThemeAttribution = false
 layout = "fixed-fill-blur"
 
 [homepage]
-layout = "profile"
+layout = "custom"
 showRecent = false
 
 [list]

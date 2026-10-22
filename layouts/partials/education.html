@@ -1,0 +1,14 @@
+{{- /* Education tiles. Context: dict "items" (cv.yaml education list) and "summary" (show the summary line). */ -}}
+<ul class="edu-grid not-prose">
+  {{- range .items }}
+  <li class="edu-tile">
+    <span class="edu-icon">{{ partial "icon.html" "graduation-cap" }}</span>
+    <div>
+      <div class="edu-title">{{ .title }}</div>
+      <div class="edu-dates">{{ .start }}{{ with .end }} – {{ . }}{{ end }}</div>
+      {{ with .org }}<div class="edu-org">{{ . }}</div>{{ end }}
+      {{ if $.summary }}{{ with .summary }}<p class="edu-summary">{{ . }}</p>{{ end }}{{ end }}
+    </div>
+  </li>
+  {{- end }}
+</ul>

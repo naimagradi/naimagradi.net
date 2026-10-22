@@ -132,6 +132,361 @@ html.dark .cv-languages li {
   }
 }
 
+/* Page width: use more of large screens than Blowfish's 80rem body with 8rem gutters, and let the
+   single pages (CV, publications) span the full content width instead of the 65ch reading width. */
+@media (min-width: 768px) {
+  body.max-w-7xl,
+  header .max-w-7xl {
+    max-width: 88rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Tighter vertical rhythm: a shorter spacer under the fixed header than Blowfish's 148px, and less space between
+   a page title and its first section heading. */
+header > .min-h-\[148px\] {
+  min-height: 84px;
+}
+
+.article-content > h2:first-child {
+  margin-top: 0.75rem;
+}
+
+#single_header,
+.article-content,
+div:has(> .article-content) {
+  max-width: none;
+  width: 100%;
+}
+
+/* Home page: profile column next to the main column, full-width content below. */
+.home {
+  padding-top: 2.5rem;
+}
+
+.home-top {
+  display: grid;
+  grid-template-columns: 19rem 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.home-profile {
+  text-align: center;
+  position: sticky;
+  top: 6rem;
+}
+
+.home-avatar {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 1.25rem;
+  border-radius: 999px;
+  border: 4px solid rgba(var(--color-neutral), 1);
+  box-shadow:
+    0 0 0 1px rgba(var(--color-neutral-200), 1),
+    0 8px 24px rgba(var(--color-neutral-900), 0.12);
+}
+
+.home-name {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: rgba(var(--color-neutral-900), 1);
+}
+
+.home-headline {
+  margin-top: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgba(var(--color-primary-700), 1);
+}
+
+.home-affiliation {
+  margin-top: 0.35rem;
+  color: rgba(var(--color-neutral-600), 1);
+}
+
+.home-affiliation a:hover {
+  color: rgba(var(--color-primary-600), 1);
+  text-decoration: underline;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--color-neutral-200), 1);
+  background: rgba(var(--color-neutral), 1);
+  color: rgba(var(--color-neutral-700), 1);
+  font-size: 1.2rem;
+  box-shadow: 0 1px 3px rgba(var(--color-neutral-900), 0.08);
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.profile-link:hover,
+.profile-link:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(var(--color-primary-600), 1);
+  border-color: rgba(var(--color-primary-600), 1);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(var(--color-primary-700), 0.25);
+}
+
+.home-main > section + section {
+  margin-top: 2.75rem;
+}
+
+.home-h {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(var(--color-neutral-900), 1);
+}
+
+.home-h-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: rgba(var(--color-primary-100), 1);
+  color: rgba(var(--color-primary-700), 1);
+  font-size: 1rem;
+}
+
+.home-prose {
+  max-width: none;
+}
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  background: rgba(var(--color-primary-600), 1);
+  color: #fff;
+  font-weight: 600;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.home-btn:hover,
+.home-btn:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(var(--color-primary-800), 1);
+}
+
+.home-pills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.home-pills li {
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--color-primary-200), 1);
+  background: rgba(var(--color-primary-50), 1);
+  color: rgba(var(--color-primary-800), 1);
+  font-size: 0.95rem;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.home-pills li:hover {
+  background: rgba(var(--color-primary-100), 1);
+  border-color: rgba(var(--color-primary-400), 1);
+}
+
+.home-wide {
+  margin-top: 3.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(var(--color-neutral-200), 1);
+}
+
+/* Education tiles (home page and CV page). */
+.edu-grid {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.edu-tile {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.2rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(var(--color-neutral-200), 1);
+  background: rgba(var(--color-neutral), 1);
+  box-shadow: 0 1px 3px rgba(var(--color-neutral-900), 0.06);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.edu-tile:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--color-primary-300), 1);
+  box-shadow: 0 10px 24px rgba(var(--color-neutral-900), 0.1);
+}
+
+.edu-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: rgba(var(--color-primary-100), 1);
+  color: rgba(var(--color-primary-700), 1);
+}
+
+.edu-title {
+  font-weight: 700;
+  line-height: 1.3;
+  color: rgba(var(--color-neutral-900), 1);
+}
+
+.edu-dates {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: rgba(var(--color-primary-700), 1);
+}
+
+.edu-org,
+.edu-summary {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: rgba(var(--color-neutral-600), 1);
+}
+
+.edu-summary {
+  margin: 0.4rem 0 0;
+}
+
+html.dark .home-name,
+html.dark .home-h,
+html.dark .edu-title {
+  color: rgba(var(--color-neutral-100), 1);
+}
+html.dark .home-headline,
+html.dark .edu-dates {
+  color: rgba(var(--color-primary-400), 1);
+}
+html.dark .home-affiliation,
+html.dark .edu-org,
+html.dark .edu-summary {
+  color: rgba(var(--color-neutral-400), 1);
+}
+html.dark .home-avatar {
+  border-color: rgba(var(--color-neutral-700), 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+html.dark .profile-link,
+html.dark .edu-tile {
+  background: rgba(var(--color-neutral-700), 1);
+  border-color: rgba(var(--color-neutral-600), 1);
+  color: rgba(var(--color-neutral-200), 1);
+}
+html.dark .profile-link:hover,
+html.dark .profile-link:focus-visible {
+  background: rgba(var(--color-primary-400), 1);
+  border-color: rgba(var(--color-primary-400), 1);
+  color: rgba(var(--color-neutral-900), 1);
+}
+html.dark .edu-tile:hover {
+  border-color: rgba(var(--color-primary-600), 1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+html.dark .home-h-icon,
+html.dark .edu-icon {
+  background: rgba(var(--color-primary-900), 1);
+  color: rgba(var(--color-primary-300), 1);
+}
+html.dark .home-btn {
+  background: rgba(var(--color-primary-400), 1);
+  color: rgba(var(--color-neutral-900), 1);
+}
+html.dark .home-btn:hover,
+html.dark .home-btn:focus-visible {
+  background: rgba(var(--color-primary-300), 1);
+}
+html.dark .home-pills li {
+  background: rgba(var(--color-primary-900), 1);
+  border-color: rgba(var(--color-primary-800), 1);
+  color: rgba(var(--color-primary-200), 1);
+}
+html.dark .home-pills li:hover {
+  border-color: rgba(var(--color-primary-600), 1);
+}
+html.dark .home-wide {
+  border-top-color: rgba(var(--color-neutral-700), 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-link,
+  .home-btn,
+  .edu-tile {
+    transition: none;
+  }
+  .profile-link:hover,
+  .home-btn:hover,
+  .edu-tile:hover {
+    transform: none;
+  }
+}
+
+/* Below 900px the profile stacks above the main column, as on blowfish-basic's mobile layout. */
+@media (max-width: 900px) {
+  .home {
+    padding-top: 1rem;
+  }
+  .home-top {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .home-profile {
+    position: static;
+  }
+}
+
 /* Demo only. */
 .palette-picker {
   position: fixed;

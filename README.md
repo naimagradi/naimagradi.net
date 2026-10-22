@@ -1,23 +1,24 @@
-# naima.gradi.net — design proposal: Blowfish (basic)
+# naima.gradi.net — design proposal: Blowfish (hybrid)
 
 Source of the personal academic website of **Naïma Gradi** (psychology and mental health, University of Geneva),
 built with [Hugo](https://gohugo.io/) and deployed to GitHub Pages.
 
-> **Branch `design/blowfish-basic`** is one of four design proposals (see [The four design proposals](#the-four-design-proposals)).
-> It uses [Blowfish](https://blowfish.page/) with its built-in *profile* home page and a few small custom
-> components. All content is **placeholder** content.
+> **Branch `design/blowfish-hybrid`** combines the two shortlisted proposals: it starts from
+> `design/blowfish-basic` (multi-page site, simple professional look, mobile layout) and brings over what was liked
+> in `design/hugoblox` (profile column with round link buttons, education tiles, interests, better use of wide
+> screens), without its gradient background or its single-page home. All content is **placeholder** content. The
+> sections below are inherited from `design/blowfish-basic` and still describe it unless stated otherwise.
 
 | | This branch |
 | --- | --- |
 | Theme | Blowfish v3.8.0 (git submodule `themes/blowfish`), unmodified |
-| Home page | Blowfish `profile` layout: centred round photo, name, headline, profile icons, then the bio, a "Research" paragraph and the three most recent publications |
-| Other pages | CV (`/en/cv/`), Publications and talks (`/en/publications/`) |
-| Default palette | B · Mint & Pine (`colorScheme = "palette-b-mint-pine"`), floating demo picker for A/B/C |
+| Home page | Custom layout (`layouts/partials/home/custom.html`, `homepage.layout = "custom"`): profile column (photo, name, headline, affiliation, round e-mail/ORCID/Scholar/LinkedIn buttons) next to the bio, a "Download CV" button, education tiles and interest pills; below, full width, the content after `<!--more-->` in `content/_index.<lang>.md` (research, recent publications). Stacks into one column below 900px |
+| Other pages | CV (`/en/cv/`, education as tiles), Publications and talks (`/en/publications/`), both at full content width |
+| Page width | 88rem with 3rem gutters from 768px (Blowfish: 80rem with 8rem gutters, 65ch reading width) |
+| Profile data | `[params.profile]` in `config/_default/languages.<lang>.toml`: `affiliation`, `affiliationUrl`, `cv`, `interests` |
+| Default palette | B · Mint & Pine (`colorScheme = "palette-b-mint-pine"`, approved), floating demo picker for A/B/C |
 | Fonts | Blowfish default (system sans-serif stack) |
 | Toolchain | Hugo only |
-
-It is the most minimal proposal: the least custom code (4 shortcodes and 2 hook partials, ~90 lines of templates, ~160 lines of CSS) and the lightest look.
-`design/blowfish-scholar` and `design/blowfish-landing` are richer variants of the same idea.
 
 ## Contents
 
@@ -524,6 +525,7 @@ Blowfish variants, hence four proposals.
 | 2026-09-25 | Domain: `gradi.net` not owned yet; the final domain may differ. The repository will move to Naïma's account later. |
 | 2026-09-26 | Blowfish demo judged too plain → two richer Blowfish variants (scholar, landing) built. |
 | 2026-09-26 | All four proposals are solid; the choice waits for real content. Each becomes a `design/*` branch with the full repository structure, sharing one layout; the palette picker is kept for now. |
+| 2026-10-22 | Shortlist narrowed to `blowfish-basic` and `hugoblox` (`blowfish-scholar` and `blowfish-landing` dropped). Palette **B · Mint & Pine** approved. `design/blowfish-hybrid` combines both: profile column on the home page only, system sans-serif fonts, education tiles on the home and CV pages. |
 
 ## Open questions and to-do before launch
 

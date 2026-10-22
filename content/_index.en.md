@@ -6,6 +6,8 @@ Placeholder biography. Naïma is a psychologist and researcher interested in men
 well-being and how cognitive training and digital interventions can support them. She completed
 her PhD at the University of Geneva.
 
+<!--more-->
+
 ## Research
 
 Placeholder paragraph describing the research programme: how attention, emotion regulation and

@@ -2,6 +2,9 @@
 {{- range $key := slice "experience" "education" "awards" -}}
   {{- with index $cv $key }}
   <h2>{{ T (printf "cv_%s" $key) }}</h2>
+  {{- if eq $key "education" }}
+  {{ partial "education.html" (dict "items" . "summary" true) }}
+  {{- else }}
   <ol class="cv-timeline not-prose">
     {{- range . }}
     <li class="cv-item">
@@ -14,6 +17,7 @@
     </li>
     {{- end }}
   </ol>
+  {{- end }}
   {{- end }}
 {{- end }}
 {{- with $cv.languages }}

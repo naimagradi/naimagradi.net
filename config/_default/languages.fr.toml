@@ -20,3 +20,9 @@ links = [
   { linkedin = "https://www.linkedin.com/" },
 ]
 name = "Naïma Gradi"
+
+[params.profile]
+affiliation = "Université de Genève"
+affiliationUrl = "https://www.unige.ch/"
+cv = "files/cv.pdf"
+interests = ["Santé mentale et bien-être", "Attention et contrôle cognitif", "Régulation émotionnelle", "Interventions numériques", "Psychologie clinique"]

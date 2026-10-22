@@ -9,3 +9,10 @@ pub_poster: Poster
 pub_recent: Recent publications
 pub_all: All publications →
 palette: Palette
+home_about: About
+home_cv: Download CV
+home_interests: Interests
+link_email: E-mail
+link_orcid: ORCID
+link_google-scholar: Google Scholar
+link_linkedin: LinkedIn

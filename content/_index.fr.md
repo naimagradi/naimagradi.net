@@ -6,6 +6,8 @@ Biographie provisoire. Naïma est psychologue et chercheuse. Elle s'intéresse �
 au bien-être et à la manière dont l'entraînement cognitif et les interventions numériques peuvent
 les soutenir. Elle a obtenu son doctorat à l'Université de Genève.
 
+<!--more-->
+
 ## Recherche
 
 Paragraphe provisoire décrivant le programme de recherche : les liens entre attention, régulation

@@ -1,0 +1,48 @@
+{{- /* Home page (params: homepage.layout = "custom"): profile column next to the bio, education and
+interests; the content after <!--more--> (research, recent publications) spans the full width below. */ -}}
+{{- $a := site.Params.author -}}
+{{- $p := site.Params.profile -}}
+{{- $cv := index hugo.Data site.Language.Lang "cv" -}}
+<article class="home">
+  <div class="home-top">
+    <aside class="home-profile">
+      {{- with $a.image }}{{ with resources.Get . }}
+      {{- $img := .Fill "320x320 Center q96" }}
+      <img class="home-avatar" src="{{ $img.RelPermalink }}" width="160" height="160" alt="{{ $a.name }}" loading="eager" fetchpriority="high">
+      {{- end }}{{ end }}
+      <h1 class="home-name">{{ $a.name }}</h1>
+      {{ with $a.headline }}<p class="home-headline">{{ . }}</p>{{ end }}
+      {{ with $p.affiliation }}<p class="home-affiliation">{{ with $p.affiliationUrl }}<a href="{{ . }}">{{ end }}{{ . }}{{ with $p.affiliationUrl }}</a>{{ end }}</p>{{ end }}
+      <div class="profile-links">
+        {{- range $a.links }}{{ range $name, $url := . }}
+        {{- $label := T (printf "link_%s" $name) | default (humanize $name) }}
+        {{- if eq $name "email" }}
+        <a class="profile-link email-link" href="#" data-email="{{ $url | base64Encode }}" aria-label="{{ $label }}" title="{{ $label }}">{{ partial "icon.html" $name }}</a>
+        {{- else }}
+        <a class="profile-link" href="{{ $url }}" target="_blank" rel="me noopener noreferrer" aria-label="{{ $label }}" title="{{ $label }}">{{ partial "icon.html" $name }}</a>
+        {{- end }}
+        {{- end }}{{ end }}
+      </div>
+    </aside>
+    <div class="home-main">
+      <section>
+        <h2 class="home-h"><span class="home-h-icon">{{ partial "icon.html" "file-lines" }}</span>{{ T "home_about" }}</h2>
+        <div class="prose dark:prose-invert home-prose">{{ .Summary }}</div>
+        {{ with $p.cv }}<a class="home-btn" href="{{ . | relURL }}">{{ partial "icon.html" "download" }}{{ T "home_cv" }}</a>{{ end }}
+      </section>
+      {{ with $cv.education }}
+      <section>
+        <h2 class="home-h"><span class="home-h-icon">{{ partial "icon.html" "graduation-cap" }}</span>{{ T "cv_education" }}</h2>
+        {{ partial "education.html" (dict "items" . "summary" false) }}
+      </section>
+      {{ end }}
+      {{ with $p.interests }}
+      <section>
+        <h2 class="home-h"><span class="home-h-icon">{{ partial "icon.html" "lightbulb" }}</span>{{ T "home_interests" }}</h2>
+        <ul class="home-pills">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </section>
+      {{ end }}
+    </div>
+  </div>
+  <section class="prose dark:prose-invert home-prose home-wide">{{ .ContentWithoutSummary }}</section>
+</article>
