@@ -189,6 +189,17 @@ div:has(> .article-content) {
   width: 100%;
 }
 
+/* Embedded videos: 16:9 at a comfortable width rather than the full page width; overrides the inline
+   padding-bottom ratio of Hugo's youtube shortcode, which would follow the page width. */
+.article-content div:has(> iframe) {
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto !important;
+  padding-bottom: 0 !important;
+  aspect-ratio: 16 / 9;
+}
+
 /* Home page: profile column next to the main column, full-width content below. */
 .home {
   padding-top: 2.5rem;
