@@ -20,14 +20,6 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-      # Only for themes that need Node (e.g. Tailwind CLI for Hugo Blox).
-      - uses: actions/setup-node@v7
-        if: hashFiles('package-lock.json') != ''
-        with:
-          node-version: lts/*
-          cache: npm
-      - if: hashFiles('package-lock.json') != ''
-        run: npm ci
       # On pushes, build for the URL GitHub Pages serves (custom domain or
       # <user>.github.io/<repo>/). Pull requests keep the baseURL from the config.
       - id: pages

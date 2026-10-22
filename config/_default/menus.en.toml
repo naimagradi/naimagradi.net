@@ -4,11 +4,21 @@ pageRef = "/"
 weight = 10
 
 [[main]]
-name = "CV"
-pageRef = "cv"
+name = "Projects"
+pageRef = "projects"
 weight = 20
 
 [[main]]
 name = "Publications"
 pageRef = "publications"
 weight = 30
+
+[[main]]
+name = "Media"
+pageRef = "media"
+weight = 40
+
+[[main]]
+name = "CV"
+pageRef = "cv"
+weight = 50

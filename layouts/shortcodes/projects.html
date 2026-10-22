@@ -1,0 +1,16 @@
+{{- /* Usage: {{< projects >}} renders a tile (icon, title, pitch) per page of the projects section, by weight. */ -}}
+<ul class="tile-grid not-prose">
+  {{- range (site.GetPage "/projects").Pages.ByWeight }}
+  {{- $github := false }}
+  {{- range .Params.links }}{{ if strings.Contains .url "github.com" }}{{ $github = true }}{{ end }}{{ end }}
+  <li>
+    <a class="tile tile-link" href="{{ .RelPermalink }}">
+      <span class="tile-icon">{{ partial "icon.html" .Params.icon }}</span>
+      <span>
+        <span class="tile-title">{{ .Title }}{{ if $github }}<span class="github-mark" title="GitHub">{{ partial "icon.html" "github" }}</span>{{ end }}</span>
+        <span class="tile-text">{{ .Params.pitch }}</span>
+      </span>
+    </a>
+  </li>
+  {{- end }}
+</ul>

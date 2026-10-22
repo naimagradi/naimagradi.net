@@ -1,5 +1,6 @@
-{{- $cv := index hugo.Data .Page.Language.Lang "cv" -}}
-{{- range $key := slice "experience" "education" "awards" -}}
+{{- $page := .Page -}}
+{{- $cv := index hugo.Data $page.Language.Lang "cv" -}}
+{{- range $key := slice "experience" "education" "awards" "service" -}}
   {{- with index $cv $key }}
   <h2>{{ T (printf "cv_%s" $key) }}</h2>
   {{- if eq $key "education" }}
@@ -10,9 +11,13 @@
     <li class="cv-item">
       <div class="cv-dates">{{ .start }}{{ with .end }} – {{ . }}{{ end }}</div>
       <div class="cv-body">
+        {{- with .image }}{{ $image := . }}{{ with $page.Resources.Get $image.src }}{{ $img := .Resize "640x q85" }}
+        <img class="cv-photo" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $image.alt }}" loading="lazy">
+        {{- end }}{{ end }}
         <div class="cv-title">{{ .title }}</div>
         {{ with .org }}<div class="cv-org">{{ . }}</div>{{ end }}
         {{ with .summary }}<p class="cv-summary">{{ . }}</p>{{ end }}
+        {{ with .highlights }}<ul class="cv-highlights">{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>{{ end }}
       </div>
     </li>
     {{- end }}
@@ -20,9 +25,16 @@
   {{- end }}
   {{- end }}
 {{- end }}
+{{- with $cv.skills }}
+<h2>{{ T "cv_skills" }}</h2>
+{{- range . }}
+<p class="cv-group">{{ .group }}</p>
+<ul class="cv-pills not-prose">{{ range .items }}<li>{{ . }}</li>{{ end }}</ul>
+{{- end }}
+{{- end }}
 {{- with $cv.languages }}
 <h2>{{ T "cv_languages" }}</h2>
-<ul class="cv-languages not-prose">
+<ul class="cv-pills not-prose">
   {{- range . }}<li><strong>{{ .name }}</strong> · {{ .level }}</li>{{ end }}
 </ul>
 {{- end }}

@@ -19,5 +19,9 @@ home = ["HTML", "RSS", "JSON"]
 [pagination]
 pagerSize = 20
 
+# Embedded YouTube videos load from youtube-nocookie.com (no cookies until played).
+[privacy.youTube]
+privacyEnhanced = true
+
 [taxonomies]
 tag = "tags"

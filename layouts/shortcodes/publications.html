@@ -1,7 +1,7 @@
-{{- /* Usage: {{< publications >}} or {{< publications limit=3 >}} */ -}}
+{{- /* Usage: {{< publications >}} or {{< publications limit=3 >}}; entries keep the order of the data file. */ -}}
 {{- $limit := .Get "limit" | default 0 | int -}}
 {{- $me := site.Params.author.name -}}
-{{- $pubs := sort hugo.Data.publications "year" "desc" -}}
+{{- $pubs := hugo.Data.publications -}}
 {{- if gt $limit 0 }}{{ $pubs = first $limit $pubs }}{{ end -}}
 <ol class="pub-list not-prose">
   {{- range $pubs }}
@@ -10,12 +10,12 @@
     <div class="pub-body">
       <div class="pub-title">
         {{- with .doi }}<a href="https://doi.org/{{ . }}">{{ end }}{{ .title }}{{ with .doi }}</a>{{ end -}}
-        {{- if eq .type "preprint" }} <span class="pub-badge">{{ T "pub_preprint" }}</span>{{ end -}}
+        {{- with .type }} <span class="pub-badge">{{ T (printf "pub_%s" .) }}</span>{{ end -}}
       </div>
       <div class="pub-authors">
         {{- range $i, $a := .authors }}{{ if $i }}, {{ end }}{{ if eq $a $me }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end -}}
       </div>
-      <div class="pub-venue"><em>{{ .venue }}</em>
+      <div class="pub-venue"><em>{{ .venue }}</em>{{ with .details }}, {{ . }}{{ end }}
         {{- with .doi }} · <a href="https://doi.org/{{ . }}">DOI</a>{{ end -}}
         {{- with .pdf }} · <a href="{{ . }}">PDF</a>{{ end -}}
       </div>

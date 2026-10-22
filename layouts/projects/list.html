@@ -1,0 +1,9 @@
+{{- /* Projects section page: title and content (the tiles come from {{< projects >}} in _index.<lang>.md). */ -}}
+{{ define "main" }}
+  <article>
+    <header id="single_header" class="mt-5">
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+    </header>
+    <div class="article-content mt-6">{{ .Content }}</div>
+  </article>
+{{ end }}

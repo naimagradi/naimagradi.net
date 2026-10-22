@@ -1,10 +1,17 @@
+{{- /* One entry per talk or poster, in the order of data/talks.yaml; each lists the events where it was
+presented (newest first) and an optional downloadable PDF. */ -}}
 <ol class="pub-list not-prose">
-  {{- range sort hugo.Data.talks "date" "desc" }}
+  {{- range hugo.Data.talks }}
   <li class="pub-item">
-    <div class="pub-year">{{ (time .date).Year }}</div>
+    <div class="pub-year">{{ with index .events 0 }}{{ (time .date).Year }}{{ end }}</div>
     <div class="pub-body">
       <div class="pub-title">{{ .title }} <span class="pub-badge">{{ T (printf "pub_%s" .type) }}</span></div>
-      <div class="pub-venue"><em>{{ .event }}</em> · {{ .location }} · {{ (time .date) | time.Format ":date_long" }}</div>
+      {{- range .events }}
+      <div class="pub-venue"><em>{{ .name }}</em> · {{ .location }} · {{ (time .date) | time.Format ":date_long" }}</div>
+      {{- end }}
+      {{- with .file }}
+      <div class="pub-venue"><a href="{{ . | relURL }}">{{ T "pub_download" }}</a></div>
+      {{- end }}
     </div>
   </li>
   {{- end }}

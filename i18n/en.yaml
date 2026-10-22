@@ -1,17 +1,26 @@
 cv_experience: Experience
 cv_education: Education
 cv_awards: Awards
+cv_service: Community involvement
+cv_skills: Skills
 cv_languages: Languages
+pub_article: Journal article
+pub_conference: Conference paper
+pub_thesis: PhD thesis
 pub_preprint: Preprint
 pub_talks: Talks & posters
 pub_talk: Talk
+pub_invited: Invited talk
 pub_poster: Poster
+pub_download: Download (PDF)
 pub_recent: Recent publications
 pub_all: All publications →
-palette: Palette
+proj_selected: Selected projects
+proj_back: All projects
+case_study: Case study
 home_about: About
 home_cv: Download CV
-home_interests: Interests
+home_expertise: Expertise
 link_email: E-mail
 link_orcid: ORCID
 link_google-scholar: Google Scholar

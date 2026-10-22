@@ -1,0 +1,25 @@
+{{- /* Project page (case study). Front matter: title, pitch, icon, weight, meta (short facts, Markdown),
+skills, optional links (label, url; GitHub URLs get the GitHub icon) and note (closing line). */ -}}
+{{ define "main" }}
+  <article class="case">
+    <header id="single_header" class="case-head">
+      <p class="case-eyebrow">{{ T "case_study" }}</p>
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+      {{ with .Params.pitch }}<p class="case-pitch">{{ . }}</p>{{ end }}
+      {{ with .Params.meta }}<ul class="case-meta">{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ul>{{ end }}
+    </header>
+    <div class="case-body prose dark:prose-invert">{{ .Content }}</div>
+    <footer class="case-foot">
+      {{ with .Params.skills }}<ul class="case-skills">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+      {{- with .Params.links }}
+      <ul class="project-links">
+        {{- range . }}
+        <li><a href="{{ .url }}">{{ if strings.Contains .url "github.com" }}{{ partial "icon.html" "github" }}{{ end }}{{ .label }} →</a></li>
+        {{- end }}
+      </ul>
+      {{- end }}
+      {{ with .Params.note }}<p class="case-note">{{ . | markdownify }}</p>{{ end }}
+      {{ with .Parent }}<p class="case-back"><a href="{{ .RelPermalink }}">← {{ T "proj_back" }}</a></p>{{ end }}
+    </footer>
+  </article>
+{{ end }}
