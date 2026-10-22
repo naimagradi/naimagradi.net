@@ -1,0 +1,5 @@
+{{- /* One column of {{< cols >}}: a heading and Markdown content. */ -}}
+<section>
+  <h2>{{ .Get "title" }}</h2>
+  {{ .Inner | .Page.RenderString (dict "display" "block") }}
+</section>

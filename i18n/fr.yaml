@@ -15,6 +15,9 @@ pub_poster: Poster
 pub_download: Télécharger (PDF)
 pub_recent: Publications récentes
 pub_all: Toutes les publications →
+proj_selected: Projets phares
+proj_back: Tous les projets
+case_study: Étude de cas
 home_about: À propos
 home_cv: Télécharger le CV
 home_expertise: Domaines d'expertise

@@ -14,11 +14,9 @@ Championship in 2020.
 
 <!--more-->
 
-## Research
+## {{< i18n "proj_selected" >}}
 
-Placeholder paragraph describing the research programme: how attention, emotion regulation and
-everyday digital habits relate to mental health, and how evidence-based interventions can be
-designed and evaluated.
+{{< projects >}}
 
 ## {{< i18n "pub_recent" >}}
 

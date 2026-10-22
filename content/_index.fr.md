@@ -14,11 +14,9 @@ et championne du monde GIRLGAMER en 2020.
 
 <!--more-->
 
-## Recherche
+## {{< i18n "proj_selected" >}}
 
-Paragraphe provisoire décrivant le programme de recherche : les liens entre attention, régulation
-émotionnelle, habitudes numériques et santé mentale, et la conception et l'évaluation
-d'interventions fondées sur des preuves.
+{{< projects >}}
 
 ## {{< i18n "pub_recent" >}}
 

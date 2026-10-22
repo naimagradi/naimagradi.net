@@ -373,7 +373,7 @@ div:has(> .article-content) {
   border-top: 1px solid rgba(var(--color-neutral-200), 1);
 }
 
-/* Tiles: education (home and CV pages). */
+/* Tiles: education (home and CV pages) and project links (home page). */
 .tile-grid {
   list-style: none;
   padding: 0;
@@ -399,7 +399,8 @@ div:has(> .article-content) {
     border-color 0.15s ease;
 }
 
-.tile:hover {
+.tile:hover,
+.tile-link:focus-visible {
   transform: translateY(-3px);
   border-color: rgba(var(--color-primary-300), 1);
   box-shadow: 0 10px 24px rgba(var(--color-neutral-900), 0.1);
@@ -422,6 +423,18 @@ div:has(> .article-content) {
   font-weight: 700;
   line-height: 1.3;
   color: rgba(var(--color-neutral-900), 1);
+}
+
+.tile-link:hover .tile-title {
+  color: rgba(var(--color-primary-700), 1);
+}
+
+/* GitHub mark after the title of a project tile whose source code is on GitHub. */
+.github-mark {
+  display: inline-flex;
+  margin-left: 0.4rem;
+  vertical-align: -0.1em;
+  color: rgba(var(--color-neutral-500), 1);
 }
 
 .tile-dates {
@@ -449,18 +462,202 @@ div:has(> .article-content) {
   grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
 }
 
+/* Project pages (case studies): eyebrow, title, pitch, row of short facts, body with figures, then skills,
+   buttons and a closing note. */
+.case-eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(var(--color-primary-700), 1);
+}
+
+.case-pitch {
+  margin: 0.75rem 0 0;
+  max-width: 56rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgba(var(--color-neutral-700), 1);
+}
+
+.case-meta {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 2.25rem;
+  font-size: 0.92rem;
+  color: rgba(var(--color-neutral-600), 1);
+}
+
+.case-meta a {
+  color: rgba(var(--color-primary-700), 1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.case-body {
+  max-width: none;
+  margin-top: 2rem;
+}
+
+.case-body figure {
+  max-width: 60rem;
+  margin: 2rem auto;
+}
+
+.case-body figure img {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(var(--color-neutral-200), 1);
+  border-radius: 0.5rem;
+}
+
+.case-body figcaption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(var(--color-neutral-600), 1);
+}
+
+.case-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.case-cols section {
+  padding: 1.1rem 1.3rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(var(--color-primary-100), 1);
+  background: rgba(var(--color-primary-50), 1);
+}
+
+.case-cols h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.case-cols p {
+  margin: 0;
+}
+
+.case-foot {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(var(--color-neutral-200), 1);
+}
+
+.case-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-skills li {
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(var(--color-primary-100), 1);
+  color: rgba(var(--color-neutral-800), 1);
+  font-size: 0.9rem;
+}
+
+.case-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(var(--color-neutral-600), 1);
+}
+
+.case-back {
+  margin: 1.5rem 0 0;
+  font-weight: 600;
+}
+
+.case-back a {
+  color: rgba(var(--color-primary-700), 1);
+}
+
+.project-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--color-primary-300), 1);
+  color: rgba(var(--color-primary-700), 1);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  background: rgba(var(--color-primary-100), 1);
+  border-color: rgba(var(--color-primary-500), 1);
+}
+
 html.dark .home-name,
 html.dark .home-h,
 html.dark .tile-title {
   color: rgba(var(--color-neutral-100), 1);
 }
 html.dark .home-headline,
-html.dark .tile-dates {
+html.dark .tile-dates,
+html.dark .tile-link:hover .tile-title,
+html.dark .case-eyebrow,
+html.dark .case-meta a,
+html.dark .case-back a,
+html.dark .project-links a {
   color: rgba(var(--color-primary-400), 1);
 }
 html.dark .home-affiliation,
-html.dark .tile-text {
+html.dark .tile-text,
+html.dark .case-meta,
+html.dark .case-body figcaption,
+html.dark .case-note {
   color: rgba(var(--color-neutral-400), 1);
+}
+html.dark .case-pitch {
+  color: rgba(var(--color-neutral-300), 1);
+}
+html.dark .case-body figure img {
+  border-color: rgba(var(--color-neutral-600), 1);
+}
+html.dark .case-cols section {
+  background: rgba(var(--color-neutral-700), 1);
+  border-color: rgba(var(--color-neutral-600), 1);
+}
+html.dark .case-foot {
+  border-top-color: rgba(var(--color-neutral-700), 1);
+}
+html.dark .case-skills li {
+  background: rgba(var(--color-primary-900), 1);
+  color: rgba(var(--color-primary-200), 1);
+}
+html.dark .project-links a {
+  border-color: rgba(var(--color-primary-700), 1);
+}
+html.dark .project-links a:hover,
+html.dark .project-links a:focus-visible {
+  background: rgba(var(--color-primary-900), 1);
+  border-color: rgba(var(--color-primary-500), 1);
 }
 html.dark .home-avatar {
   border-color: rgba(var(--color-neutral-700), 1);
@@ -478,7 +675,8 @@ html.dark .profile-link:focus-visible {
   border-color: rgba(var(--color-primary-400), 1);
   color: rgba(var(--color-neutral-900), 1);
 }
-html.dark .tile:hover {
+html.dark .tile:hover,
+html.dark .tile-link:focus-visible {
   border-color: rgba(var(--color-primary-600), 1);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
