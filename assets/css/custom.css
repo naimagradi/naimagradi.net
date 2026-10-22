@@ -79,15 +79,38 @@
   vertical-align: middle;
 }
 
-.cv-languages {
+.cv-highlights {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: rgba(var(--color-neutral-700), 1);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.cv-highlights li + li {
+  margin-top: 0.3rem;
+}
+
+.cv-highlights strong {
+  color: rgba(var(--color-neutral-900), 1);
+}
+
+.cv-group {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.cv-pills {
   list-style: none;
   padding: 0;
+  margin: 0 0 1.25rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
-.cv-languages li {
+.cv-pills li {
   background: rgba(var(--color-primary-100), 1);
   color: rgba(var(--color-neutral-800), 1);
   padding: 0.35rem 0.9rem;
@@ -118,8 +141,14 @@ html.dark .pub-authors,
 html.dark .pub-venue {
   color: rgba(var(--color-neutral-400), 1);
 }
+html.dark .cv-highlights {
+  color: rgba(var(--color-neutral-300), 1);
+}
+html.dark .cv-highlights strong {
+  color: rgba(var(--color-neutral-100), 1);
+}
 html.dark .pub-badge,
-html.dark .cv-languages li {
+html.dark .cv-pills li {
   background: rgba(var(--color-primary-900), 1);
   color: rgba(var(--color-primary-200), 1);
 }
@@ -333,8 +362,8 @@ div:has(> .article-content) {
   border-top: 1px solid rgba(var(--color-neutral-200), 1);
 }
 
-/* Education tiles (home page and CV page). */
-.edu-grid {
+/* Tiles: education (home and CV pages). */
+.tile-grid {
   list-style: none;
   padding: 0;
   margin: 1rem 0 2.5rem;
@@ -343,10 +372,11 @@ div:has(> .article-content) {
   gap: 1rem;
 }
 
-.edu-tile {
+.tile {
   display: flex;
   gap: 0.9rem;
   align-items: flex-start;
+  height: 100%;
   padding: 1.1rem 1.2rem;
   border-radius: 0.75rem;
   border: 1px solid rgba(var(--color-neutral-200), 1);
@@ -358,13 +388,13 @@ div:has(> .article-content) {
     border-color 0.15s ease;
 }
 
-.edu-tile:hover {
+.tile:hover {
   transform: translateY(-3px);
   border-color: rgba(var(--color-primary-300), 1);
   box-shadow: 0 10px 24px rgba(var(--color-neutral-900), 0.1);
 }
 
-.edu-icon {
+.tile-icon {
   flex: none;
   display: inline-flex;
   align-items: center;
@@ -376,13 +406,14 @@ div:has(> .article-content) {
   color: rgba(var(--color-primary-700), 1);
 }
 
-.edu-title {
+.tile-title {
+  display: block;
   font-weight: 700;
   line-height: 1.3;
   color: rgba(var(--color-neutral-900), 1);
 }
 
-.edu-dates {
+.tile-dates {
   margin-top: 0.2rem;
   font-size: 0.85rem;
   font-weight: 600;
@@ -390,29 +421,34 @@ div:has(> .article-content) {
   color: rgba(var(--color-primary-700), 1);
 }
 
-.edu-org,
-.edu-summary {
+.tile-text {
+  display: block;
+  margin-top: 0.2rem;
   font-size: 0.92rem;
   line-height: 1.45;
   color: rgba(var(--color-neutral-600), 1);
 }
 
-.edu-summary {
+.tile-summary {
   margin: 0.4rem 0 0;
+}
+
+/* Two education tiles per row in the home page's main column. */
+.home-main .tile-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
 }
 
 html.dark .home-name,
 html.dark .home-h,
-html.dark .edu-title {
+html.dark .tile-title {
   color: rgba(var(--color-neutral-100), 1);
 }
 html.dark .home-headline,
-html.dark .edu-dates {
+html.dark .tile-dates {
   color: rgba(var(--color-primary-400), 1);
 }
 html.dark .home-affiliation,
-html.dark .edu-org,
-html.dark .edu-summary {
+html.dark .tile-text {
   color: rgba(var(--color-neutral-400), 1);
 }
 html.dark .home-avatar {
@@ -420,7 +456,7 @@ html.dark .home-avatar {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 html.dark .profile-link,
-html.dark .edu-tile {
+html.dark .tile {
   background: rgba(var(--color-neutral-700), 1);
   border-color: rgba(var(--color-neutral-600), 1);
   color: rgba(var(--color-neutral-200), 1);
@@ -431,12 +467,12 @@ html.dark .profile-link:focus-visible {
   border-color: rgba(var(--color-primary-400), 1);
   color: rgba(var(--color-neutral-900), 1);
 }
-html.dark .edu-tile:hover {
+html.dark .tile:hover {
   border-color: rgba(var(--color-primary-600), 1);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 html.dark .home-h-icon,
-html.dark .edu-icon {
+html.dark .tile-icon {
   background: rgba(var(--color-primary-900), 1);
   color: rgba(var(--color-primary-300), 1);
 }
@@ -463,12 +499,12 @@ html.dark .home-wide {
 @media (prefers-reduced-motion: reduce) {
   .profile-link,
   .home-btn,
-  .edu-tile {
+  .tile {
     transition: none;
   }
   .profile-link:hover,
   .home-btn:hover,
-  .edu-tile:hover {
+  .tile:hover {
     transform: none;
   }
 }

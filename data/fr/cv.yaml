@@ -1,34 +1,67 @@
+# Entrées du CV (voir data/en/cv.yaml pour le format).
 experience:
-  - title: Doctorante
-    org: Université de Genève, Faculté de psychologie et des sciences de l'éducation
-    start: 2021
-    end: 2026
-    summary: Description provisoire du projet de thèse, de l'assistanat d'enseignement et de l'encadrement d'étudiant·e·s de master.
-  - title: Stagiaire en psychologie clinique
-    org: Hôpital (provisoire)
+  - title: Postdoctorante
+    org: Université de Genève, Brain and Learning Lab
+    start: 2020
+    end: aujourd'hui
+    summary: Postdoctorante (depuis 2026), doctorante (2021–2026) et assistante de recherche (2020–2021).
+    highlights:
+      - "**Pilotage de projet :** préparation, déploiement et suivi opérationnel d'un essai clinique randomisé sur trois sites (Suisse, Israël, États-Unis) ; coordination des partenaires et gestion des risques."
+      - "**Protocoles et formation :** conception des procédures pour les expérimentateurs en aveugle et non aveugle ; harmonisation des pratiques et formation des équipes internationales."
+      - "**Solutions numériques :** co-conception d'Eco-Rescue et contribution à la plateforme Wave ; intégration avec Qualtrics, conduite des pilotes, validation et gestion des incidents avec les développeurs."
+      - "**Recherche et évaluation :** revue systématique de 39 essais (25 jeux analysés), méta-analyse de 19 essais et publications sur les interventions numériques en santé mentale."
+      - "**Innovation IA :** co-développement de llmde, outil open source d'extraction structurée de données par modèles de langage, évalué sur 40 études (97 % de précision)."
+      - "**Encadrement :** supervision d'un assistant de recherche et encadrement principal d'au moins 11 mémoires de master."
+  - title: Joueuse professionnelle d'esport (League of Legends)
+    org: OOB Team
     start: 2019
     end: 2020
-    summary: Description provisoire du stage clinique.
+    summary: Toplaner sous le pseudonyme Freyja. Championne du monde GIRLGAMER (2020) et double championne d'Europe (2019) ; travail en équipe à haut niveau.
+  - title: Stagiaire UX designer
+    org: Capgemini (pour Airbus)
+    start: 2018
+    summary: "Conception d'une interface pour Skywise, la plateforme de données d'Airbus : entretiens utilisateurs, personas et ateliers de conception en équipe agile (SAFe)."
 education:
   - title: Doctorat en psychologie
     org: Université de Genève
     start: 2021
     end: 2026
-    summary: Titre de thèse provisoire sur l'entraînement attentionnel et le bien-être.
-  - title: Master en psychologie clinique
-    org: Université (provisoire)
+    summary: "Thèse : Video game-based interventions for anxiety and depression: from design to effectiveness."
+  - title: Post-master en ergonomie et psychologie cognitive
+    org: Université Toulouse 2
     start: 2018
-    end: 2020
-  - title: Bachelor en psychologie
-    org: Université (provisoire)
+    summary: "Projet d'équipe : Flexiboard, un dispositif d'apprentissage tangible pour des enfants déficients visuels."
+  - title: Master en psychologie cognitive et du développement
+    org: Université d'Angers
+    start: 2017
+  - title: Licence en psychologie
+    org: Université d'Angers
     start: 2015
-    end: 2018
 awards:
-  - title: Bourse de voyage (provisoire)
-    org: Société (provisoire)
-    start: 2024
+  - title: Championne du monde, GIRLGAMER Esports Festival
+    org: Dubaï
+    start: 2020
+  - title: Championne d'Europe, GIRLGAMER Esports Festival
+    org: Madrid
+    start: 2019
+  - title: Championne d'Europe, La Ligue Féminine
+    org: Paris
+    start: 2019
+  - title: Vainqueure, ESWC Paris Games Week Open (League of Legends féminin)
+    org: Paris
+    start: 2015
+service:
+  - title: Membre du comité
+    org: Social Campus Biotech Association, Genève
+    start: 2022
+    end: 2025
+skills:
+  - group: Gestion de projet
+    items: ["Coordination", "Gestion des risques", "Formation", "Méthodes agiles (SAFe)"]
+  - group: Numérique
+    items: ["UX design", "Tests utilisateurs", "Qualtrics", "R", "IA / LLM"]
 languages:
   - name: Français
     level: Langue maternelle
   - name: Anglais
-    level: Courant
+    level: C1, langue de travail

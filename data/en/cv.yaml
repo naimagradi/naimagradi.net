@@ -1,34 +1,68 @@
+# CV entries: `start` and optional `end` (or a single year), `title`, `org`, optional `summary` and
+# `highlights` (Markdown bullet points).
 experience:
-  - title: Doctoral researcher
-    org: University of Geneva, Faculty of Psychology and Educational Sciences
-    start: 2021
-    end: 2026
-    summary: Placeholder description of the doctoral project, teaching assistantship and supervision of master students.
-  - title: Clinical psychology intern
-    org: Placeholder hospital
+  - title: Postdoctoral researcher
+    org: University of Geneva, Brain and Learning Lab
+    start: 2020
+    end: present
+    summary: Postdoctoral researcher (since 2026), PhD candidate (2021–2026) and research assistant (2020–2021).
+    highlights:
+      - "**Project management:** preparation, deployment and operational follow-up of a randomised clinical trial across three sites (Switzerland, Israel, United States); partner coordination and risk management."
+      - "**Protocols and training:** procedures for blinded and unblinded experimenters; harmonisation of practices and training of the international teams."
+      - "**Digital solutions:** co-design of the Eco-Rescue game and contribution to the Wave platform; Qualtrics integration, pilot testing, validation and incident handling with the developers."
+      - "**Research and evaluation:** systematic review of 39 trials (25 games analysed) and meta-analysis of 19 trials on digital interventions for mental health."
+      - "**AI innovation:** co-development of llmde, an open-source tool for structured data extraction with language models, evaluated on 40 studies (97% precision)."
+      - "**Supervision:** supervision of a research assistant and main supervisor of at least 11 master's theses."
+  - title: Professional esports player (League of Legends)
+    org: OOB Team
     start: 2019
     end: 2020
-    summary: Placeholder description of the clinical internship.
+    summary: Top laner under the name Freyja. GIRLGAMER World Champion (2020) and two-time European Champion (2019); high-level teamwork.
+  - title: UX design intern
+    org: Capgemini (for Airbus)
+    start: 2018
+    summary: "Design of an interface for Skywise, Airbus's data platform: user interviews, personas and design workshops in an agile team (SAFe)."
 education:
   - title: PhD in Psychology
     org: University of Geneva
     start: 2021
     end: 2026
-    summary: Placeholder thesis title on attention training and well-being.
-  - title: MSc in Clinical Psychology
-    org: Placeholder University
+    summary: "Thesis: Video game-based interventions for anxiety and depression: from design to effectiveness."
+  - title: Post-master's degree in Ergonomics and Cognitive Psychology
+    org: University of Toulouse 2
     start: 2018
-    end: 2020
-  - title: BSc in Psychology
-    org: Placeholder University
+    summary: "Team project: Flexiboard, a tangible learning device for visually impaired children."
+  - title: Master's degree in Cognitive and Developmental Psychology
+    org: University of Angers
+    start: 2017
+  - title: Bachelor's degree in Psychology
+    org: University of Angers
     start: 2015
-    end: 2018
 awards:
-  - title: Placeholder travel award
-    org: Placeholder society
-    start: 2024
+  - title: World Champion, GIRLGAMER Esports Festival
+    org: Dubai
+    start: 2020
+  - title: European Champion, GIRLGAMER Esports Festival
+    org: Madrid
+    start: 2019
+  - title: European Champion, La Ligue Féminine
+    org: Paris
+    start: 2019
+  - title: Winner, ESWC Paris Games Week Open (women's League of Legends)
+    org: Paris
+    start: 2015
+service:
+  - title: Committee member
+    org: Social Campus Biotech Association, Geneva
+    start: 2022
+    end: 2025
+skills:
+  - group: Project management
+    items: ["Coordination", "Risk management", "Team training", "Agile methods (SAFe)"]
+  - group: Digital
+    items: ["UX design", "User testing", "Qualtrics", "R", "AI / LLMs"]
 languages:
   - name: French
     level: Native
   - name: English
-    level: Fluent
+    level: C1, working language
