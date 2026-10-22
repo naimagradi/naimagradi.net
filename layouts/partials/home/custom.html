@@ -1,5 +1,5 @@
 {{- /* Home page (params: homepage.layout = "custom"): profile column next to the bio, education and
-interests; the content after <!--more--> (research, recent publications) spans the full width below. */ -}}
+expertise; the content after <!--more--> (projects, recent publications) spans the full width below. */ -}}
 {{- $a := site.Params.author -}}
 {{- $p := site.Params.profile -}}
 {{- $cv := index hugo.Data site.Language.Lang "cv" -}}
@@ -7,7 +7,7 @@ interests; the content after <!--more--> (research, recent publications) spans t
   <div class="home-top">
     <aside class="home-profile">
       {{- with $a.image }}{{ with resources.Get . }}
-      {{- $img := .Fill "320x320 Center q96" }}
+      {{- $img := .Fill "480x480 Center q90" }}
       <img class="home-avatar" src="{{ $img.RelPermalink }}" width="160" height="160" alt="{{ $a.name }}" loading="eager" fetchpriority="high">
       {{- end }}{{ end }}
       <h1 class="home-name">{{ $a.name }}</h1>
@@ -36,9 +36,9 @@ interests; the content after <!--more--> (research, recent publications) spans t
         {{ partial "education.html" (dict "items" . "summary" false) }}
       </section>
       {{ end }}
-      {{ with $p.interests }}
+      {{ with $p.expertise }}
       <section>
-        <h2 class="home-h"><span class="home-h-icon">{{ partial "icon.html" "lightbulb" }}</span>{{ T "home_interests" }}</h2>
+        <h2 class="home-h"><span class="home-h-icon">{{ partial "icon.html" "briefcase" }}</span>{{ T "home_expertise" }}</h2>
         <ul class="home-pills">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
       </section>
       {{ end }}

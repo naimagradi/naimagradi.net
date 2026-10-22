@@ -5,24 +5,22 @@ weight = 2
 
 [params]
 dateFormat = "2 janvier 2006"
-description = "Chercheuse en psychologie et santé mentale, Université de Genève."
+description = "Naïma Gradi, docteure en psychologie (Université de Genève) : gestion de projets, recherche appliquée et innovation numérique en santé mentale."
 displayName = "FR"
 isoCode = "fr"
 
 [params.author]
-bio = "Doctorat en psychologie · Université de Genève"
-headline = "Chercheuse en psychologie et santé mentale"
-image = "img/avatar.png"
+headline = "Gestion de projets · Recherche appliquée & innovation numérique"
+image = "img/naima-gradi.jpg"
 links = [
-  { email = "mailto:placeholder@example.com" },
-  { orcid = "https://orcid.org/0000-0000-0000-0000" },
-  { google-scholar = "https://scholar.google.com/" },
-  { linkedin = "https://www.linkedin.com/" },
+  { email = "mailto:ngradi16@gmail.com" },
+  { orcid = "https://orcid.org/0009-0004-6414-3841" },
+  { linkedin = "https://www.linkedin.com/in/naima-gradi/" },
 ]
 name = "Naïma Gradi"
 
 [params.profile]
-affiliation = "Université de Genève"
+affiliation = "Docteure en psychologie · Université de Genève"
 affiliationUrl = "https://www.unige.ch/"
-cv = "files/cv.pdf"
-interests = ["Santé mentale et bien-être", "Attention et contrôle cognitif", "Régulation émotionnelle", "Interventions numériques", "Psychologie clinique"]
+cv = "files/naima-gradi-cv-fr.pdf"
+expertise = ["Gestion de projet", "Essais cliniques internationaux", "Conception centrée utilisateur", "Santé mentale numérique", "Jeux vidéo et jeux sérieux", "Analyse de données (R)", "Workflows assistés par IA (LLM)", "Formation et coordination d'équipes"]
