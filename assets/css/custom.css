@@ -486,32 +486,3 @@ html.dark .home-wide {
     position: static;
   }
 }
-
-/* Demo only. */
-.palette-picker {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 100;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-  background: rgba(var(--color-neutral-100), 1);
-  border: 1px solid rgba(var(--color-neutral-300), 1);
-  font-size: 0.85rem;
-  color: rgba(var(--color-neutral-800), 1);
-}
-.palette-picker select {
-  background: transparent;
-  color: inherit;
-}
-html.dark .palette-picker {
-  background: rgba(var(--color-neutral-700), 1);
-  border-color: rgba(var(--color-neutral-600), 1);
-  color: rgba(var(--color-neutral-100), 1);
-}
-html.dark .palette-picker option {
-  color: #000;
-}
