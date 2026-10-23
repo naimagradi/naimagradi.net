@@ -1,4 +1,4 @@
-# naima.gradi.net
+# naimagradi.net
 
 Personal website of Naïma Gradi, built with [Hugo](https://gohugo.io/) and the [Blowfish](https://blowfish.page/)
 theme, in English and French.
@@ -8,8 +8,8 @@ theme, in English and French.
 Requires [Hugo extended](https://gohugo.io/installation/) (latest) and Git.
 
 ```sh
-git clone --recurse-submodules https://github.com/mscheltienne/naima.gradi.net.git
-cd naima.gradi.net
+git clone --recurse-submodules https://github.com/naimagradi/naimagradi.net.git
+cd naimagradi.net
 hugo server                  # http://localhost:1313/
 hugo build --gc --minify     # production build into public/
 uvx pre-commit run --all-files   # linters (Biome and markdownlint need Node.js)

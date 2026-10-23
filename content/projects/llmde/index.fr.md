@@ -11,7 +11,7 @@ meta:
 skills: ["Conception de flux de travail LLM", "Synthèse des preuves", "Recherche reproductible"]
 links:
   - label: Voir sur GitHub
-    url: https://github.com/mscheltienne/llmde
+    url: https://github.com/naimagradi/llmde
 note: "Le modèle a atteint une précision de 97 % face à l’extraction manuelle."
 ---
 

@@ -11,7 +11,7 @@ meta:
 skills: ["LLM workflow design", "Evidence synthesis", "Reproducible research"]
 links:
   - label: View on GitHub
-    url: https://github.com/mscheltienne/llmde
+    url: https://github.com/naimagradi/llmde
 note: "The model reached 97% precision against the manual extraction."
 ---
 
