@@ -1,7 +1,7 @@
 # Site-wide configuration. Language-specific settings live in languages.<lang>.toml,
 # menus in menus.<lang>.toml and theme parameters in params.toml.
 # The CI overrides baseURL with the URL GitHub Pages serves.
-baseURL = "https://naima.gradi.net/"
+baseURL = "https://naimagradi.net/"
 defaultContentLanguage = "en"
 # English under /en/ and French under /fr/; / redirects to /en/.
 defaultContentLanguageInSubdir = true
