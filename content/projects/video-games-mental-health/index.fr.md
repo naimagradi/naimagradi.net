@@ -10,6 +10,8 @@ meta:
   - De 2021 à 2026
 skills: ["Revue systématique", "Méta-analyse", "Analyse du design de jeux"]
 links:
+  - label: Thèse de doctorat
+    url: https://archive-ouverte.unige.ch/unige:195683
   - label: Article CHI PLAY 2026
     url: https://doi.org/10.1145/3800965.3834322
   - label: Article JCSG 2025
